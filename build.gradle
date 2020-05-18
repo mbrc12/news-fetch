@@ -1,0 +1,49 @@
+plugins {
+    id 'java'
+    id 'idea'
+    id "io.freefair.lombok" version "5.1.0"
+}
+
+group 'io.mbrc'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Logging
+    compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.30'
+    compile group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.3'
+
+    // Spring
+    compile group: 'org.springframework', name: 'spring-core', version: '5.2.6.RELEASE'
+    compile group: 'org.springframework', name: 'spring-context', version: '5.2.6.RELEASE'
+
+    // Testing
+    testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.6.2'
+    testRuntime group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: '5.6.2'
+    testCompile group: 'org.springframework', name: 'spring-test', version: '5.2.6.RELEASE'
+
+    // Kafka
+    compile group: 'org.apache.kafka', name: 'kafka_2.13', version: '2.5.0'
+
+    // okhttp
+    compile group: 'com.squareup.okhttp3', name: 'okhttp', version: '4.6.0'
+
+    // okio
+    compile group: 'com.squareup.okio', name: 'okio', version: '2.6.0'
+
+    // gson
+    implementation 'com.google.code.gson:gson:2.8.6'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+task runClient(type : JavaExec) {
+    main = "io.mbrc.newsfetch.client.Main"
+    classpath = sourceSets.main.runtimeClasspath
+}
+
