@@ -2,11 +2,9 @@ package io.mbrc.newsfetch.client;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
-import com.google.protobuf.Message;
-import com.google.protobuf.util.JsonFormat;
 import io.mbrc.newsfetch.util.Hasher;
 import io.mbrc.newsfetch.util.KeyValuePair;
-import io.mbrc.newsfetch.util.NewsTypeProtobuf;
+import io.mbrc.newsfetch.util.NewsType;
 import lombok.extern.slf4j.Slf4j;
 import okhttp3.*;
 import okio.BufferedSource;
@@ -14,8 +12,6 @@ import org.springframework.beans.factory.DisposableBean;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
-import java.io.Reader;
-import java.io.StringReader;
 import java.nio.charset.Charset;
 import java.util.List;
 import java.util.function.BiConsumer;
@@ -72,7 +68,7 @@ public class ApiClient implements DisposableBean {
     }
 
     public void request(QueryParameters params,
-                        final Consumer<List<KeyValuePair<String, NewsTypeProtobuf.NewsType>>>
+                        final Consumer<List<KeyValuePair<String, NewsType>>>
                                 onSuccess,
                         final BiConsumer<Integer, BufferedSource> onRejectedRequest,
                         final Consumer<IOException> onFailure) {
@@ -89,21 +85,14 @@ public class ApiClient implements DisposableBean {
                 if (response.isSuccessful()) {
                     try {
                         String body = response.body().source().readString(Charset.defaultCharset());
-                        List<KeyValuePair<String, NewsTypeProtobuf.NewsType>> data = StreamSupport
+                        List<KeyValuePair<String, NewsType>> data = StreamSupport
                                 .stream(gson.fromJson(body, JsonArray.class).spliterator(),
                                         false)
                                 .map(jsonElement -> {
                                     String jsonString = jsonElement.toString();
-                                    Reader jsonElementReader = new StringReader(jsonString);
-                                    Message.Builder builder = NewsTypeProtobuf.NewsType.newBuilder();
-                                    try {
-                                        JsonFormat.parser().ignoringUnknownFields().merge(jsonElementReader, builder);
-                                    } catch (IOException e) {
-                                        e.printStackTrace();    // lose
-                                        return null;
-                                    }
+                                    NewsType news = gson.fromJson(jsonString, NewsType.class);
                                     String hash = hasher.hash(jsonString);
-                                    return pairOf(hash, (NewsTypeProtobuf.NewsType) builder.build());
+                                    return pairOf(hash, news);
                                 })
                                 .collect(Collectors.toList());
 

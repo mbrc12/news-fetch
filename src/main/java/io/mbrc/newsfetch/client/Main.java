@@ -9,8 +9,9 @@ public class Main {
     public static void main(String[] args) {
         ConfigurableApplicationContext context
                 = new AnnotationConfigApplicationContext(SpringConfig.class);
-        Client client = context.getBean("client", Client.class);
-        client.execute();
+//        Client client = context.getBean("client", Client.class);
+//        client.execute();
+        context.getBean("test", Test.class).test();
         context.close();
     }
 }

@@ -1,6 +1,6 @@
 package io.mbrc.newsfetch.client;
 
-import io.mbrc.newsfetch.util.NewsTypeProtobuf;
+import io.mbrc.newsfetch.util.NewsType;
 import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.kafka.clients.producer.KafkaProducer;
@@ -43,7 +43,7 @@ public class KafkaPusherFactory {
 
     public class KafkaPusher {
 
-        private final Producer<String, NewsTypeProtobuf.NewsType> producer;
+        private final Producer<String, NewsType> producer;
 
         private KafkaPusher() {
             Properties props = new Properties();
@@ -54,10 +54,10 @@ public class KafkaPusherFactory {
             this.producer = new KafkaProducer<>(props);
         }
 
-        private void send(String key, NewsTypeProtobuf.NewsType news,
+        private void send(String key, NewsType news,
                           @NotNull BiConsumer<RecordMetadata, Exception> consumer) {
 
-            ProducerRecord<String, NewsTypeProtobuf.NewsType> record =
+            ProducerRecord<String, NewsType> record =
                     new ProducerRecord<>(key, news);
 
             this.producer.send(record, consumer::accept);

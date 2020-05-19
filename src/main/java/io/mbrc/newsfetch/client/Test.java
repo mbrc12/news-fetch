@@ -36,7 +36,7 @@ public class Test {
         apiClient.request(params,
                 (resp) -> {
                     resp.forEach(news -> news.acceptedBy((hash, data) ->
-                            log.info("Hash: " + hash)));
+                            log.info("Title: " + data.title)));
                 },
                 (code, src) -> {
                     log.info(Integer.toString(code));

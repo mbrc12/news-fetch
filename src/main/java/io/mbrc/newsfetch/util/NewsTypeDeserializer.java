@@ -1,23 +1,27 @@
 package io.mbrc.newsfetch.util;
 
-import com.google.protobuf.InvalidProtocolBufferException;
-import com.google.protobuf.Message;
+import com.google.gson.Gson;
 import org.apache.kafka.common.serialization.Deserializer;
+import org.apache.kafka.common.serialization.StringDeserializer;
 
-public class NewsTypeDeserializer implements Deserializer<NewsTypeProtobuf.NewsType> {
+import java.util.Map;
+
+public class NewsTypeDeserializer implements Deserializer<NewsType> {
+
+    private Gson gson;
+    private StringDeserializer stringDeserializer;
 
     @Override
-    public NewsTypeProtobuf.NewsType deserialize(String topic, byte[] bytes) {
-        Message.Builder builder = NewsTypeProtobuf.NewsType.newBuilder();
+    public void configure(Map<String, ?> configs, boolean isKey) {
+        this.gson = new Gson();
+        this.stringDeserializer = new StringDeserializer();
+        stringDeserializer.configure(configs, isKey);
+    }
 
-        try {
-            builder.mergeFrom(bytes);
-        } catch (InvalidProtocolBufferException e) {
-            e.printStackTrace();
-            return null;
-        }
-
-        return (NewsTypeProtobuf.NewsType) builder.build();
+    @Override
+    public NewsType deserialize(String topic, byte[] bytes) {
+        String json = stringDeserializer.deserialize(topic, bytes);
+        return gson.fromJson(json, NewsType.class);
     }
 
 }
