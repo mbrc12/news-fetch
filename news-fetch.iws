@@ -1,30 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2aa7b304-d9db-42db-886c-2ffde1b73dbc" name="Default Changelist" comment="First commit. Basic Client operations, and basic deserialization from Json.">
-      <change afterPath="$PROJECT_DIR$/.gitattributes" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lombok.config" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/news-fetch.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/news-fetch.ipr" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/news-fetch.iws" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/news-fetch.main.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/news-fetch.test.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/client/ApiClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/client/ApiConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/client/GsonUTCDateAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/client/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/client/NewsType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/client/NewsTypeHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/client/QueryParameters.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/client/SpringConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/client/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
+    <list default="true" id="2aa7b304-d9db-42db-886c-2ffde1b73dbc" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/client/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/client/KafkaPusherFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/util/Hasher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/util/KeyValuePair.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/util/NewsTypeDeserializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/util/NewsTypeProtobuf.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/util/NewsTypeSerializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/protobuf/NewsType.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/news-fetch.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/news-fetch.ipr" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/news-fetch.iws" beforeDir="false" afterPath="$PROJECT_DIR$/news-fetch.iws" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/news-fetch.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/news-fetch.main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/news-fetch.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/news-fetch.test.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/client/ApiClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/client/ApiClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/client/ApiConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/client/ApiConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/client/GsonUTCDateAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/util/GsonUTCDateAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/client/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/client/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/client/NewsType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/util/NewsType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/client/NewsTypeHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/util/NewsTypeHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/client/SpringConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/client/SpringConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/client/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/client/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,7 +150,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="io.protostuff.jetbrains.plugin.settings.ProtobufSettingsConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -258,8 +257,24 @@
       <option name="presentableId" value="Default" />
       <updated>1589813681379</updated>
       <workItem from="1589813683144" duration="4762000" />
-      <workItem from="1589818733111" duration="11588000" />
+      <workItem from="1589818733111" duration="15854000" />
+      <workItem from="1589876381948" duration="11875000" />
     </task>
+    <task id="LOCAL-00001" summary="First commit. Basic Client operations, and basic deserialization from Json.">
+      <created>1589830430030</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1589830430030</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Fixed .gitignore">
+      <created>1589830636754</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1589830636754</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="UpdateCopyrightCheckinHandler">
@@ -269,44 +284,61 @@
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="First commit. Basic Client operations, and basic deserialization from Json." />
-    <option name="LAST_COMMIT_MESSAGE" value="First commit. Basic Client operations, and basic deserialization from Json." />
+    <MESSAGE value="Fixed .gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed .gitignore" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="559" y="214" key="#Plugins" timestamp="1589885498659">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="559" y="214" key="#Plugins/0.0.1920.1080@0.0.1920.1080" timestamp="1589885498659" />
     <state x="772" y="278" key="#com.intellij.ide.util.MemberChooser" timestamp="1589826050832">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="772" y="278" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1589826050832" />
-    <state x="512" y="123" key="CommitChangelistDialog2" timestamp="1589830255983">
+    <state x="725" y="440" width="467" height="238" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1589870485648">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="512" y="123" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1589830255983" />
+    <state x="725" y="440" width="467" height="238" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1080@0.0.1920.1080" timestamp="1589870485648" />
+    <state x="512" y="123" key="CommitChangelistDialog2" timestamp="1589830636693">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="512" y="123" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1589830636693" />
     <state x="742" y="314" key="FileChooserDialogImpl" timestamp="1589813880571">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="742" y="314" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1589813880571" />
-    <state width="1876" height="493" key="GridCell.Tab.0.bottom" timestamp="1589830201624">
+    <state x="820" y="470" key="Github.ShareDialog" timestamp="1589830489516">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1876" height="493" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1589830201624" />
-    <state width="1876" height="493" key="GridCell.Tab.0.center" timestamp="1589830201623">
+    <state x="820" y="470" key="Github.ShareDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1589830489516" />
+    <state width="1876" height="301" key="GridCell.Tab.0.bottom" timestamp="1589889233587">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1876" height="493" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1589830201623" />
-    <state width="1876" height="493" key="GridCell.Tab.0.left" timestamp="1589830201622">
+    <state width="1876" height="301" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1589889233587" />
+    <state width="1876" height="301" key="GridCell.Tab.0.center" timestamp="1589889233585">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1876" height="493" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1589830201622" />
-    <state width="1876" height="493" key="GridCell.Tab.0.right" timestamp="1589830201623">
+    <state width="1876" height="301" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1589889233585" />
+    <state width="1876" height="301" key="GridCell.Tab.0.left" timestamp="1589889233584">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1876" height="493" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1589830201623" />
-    <state x="453" y="205" key="SettingsEditor" timestamp="1589830324672">
+    <state width="1876" height="301" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1589889233584" />
+    <state width="1876" height="301" key="GridCell.Tab.0.right" timestamp="1589889233586">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="453" y="205" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1589830324672" />
+    <state width="1876" height="301" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1589889233586" />
+    <state x="453" y="205" key="SettingsEditor" timestamp="1589876419460">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="453" y="205" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1589876419460" />
+    <state x="559" y="306" key="Vcs.Push.Dialog.v2" timestamp="1589830467286">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="559" y="306" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1589830467286" />
     <state x="320" y="238" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1589822311069">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

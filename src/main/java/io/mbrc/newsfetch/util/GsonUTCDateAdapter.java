@@ -1,4 +1,4 @@
-package io.mbrc.newsfetch.client;
+package io.mbrc.newsfetch.util;
 
 import com.google.gson.*;
 

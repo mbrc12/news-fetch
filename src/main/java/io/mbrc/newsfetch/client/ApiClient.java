@@ -1,6 +1,12 @@
 package io.mbrc.newsfetch.client;
 
 import com.google.gson.Gson;
+import com.google.gson.JsonArray;
+import com.google.protobuf.Message;
+import com.google.protobuf.util.JsonFormat;
+import io.mbrc.newsfetch.util.Hasher;
+import io.mbrc.newsfetch.util.KeyValuePair;
+import io.mbrc.newsfetch.util.NewsTypeProtobuf;
 import lombok.extern.slf4j.Slf4j;
 import okhttp3.*;
 import okio.BufferedSource;
@@ -8,10 +14,16 @@ import org.springframework.beans.factory.DisposableBean;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
+import java.io.Reader;
+import java.io.StringReader;
 import java.nio.charset.Charset;
 import java.util.List;
 import java.util.function.BiConsumer;
 import java.util.function.Consumer;
+import java.util.stream.Collectors;
+import java.util.stream.StreamSupport;
+
+import static io.mbrc.newsfetch.util.KeyValuePair.pairOf;
 
 
 @Slf4j
@@ -21,11 +33,13 @@ public class ApiClient implements DisposableBean {
     private final ApiConfig apiConfig;
     private final OkHttpClient httpClient;
     private final Gson gson;
+    private final Hasher hasher;
 
-    private ApiClient(ApiConfig apiConfig, Gson gson) {
+    private ApiClient(ApiConfig apiConfig, Gson gson, Hasher hasher) {
         this.apiConfig = apiConfig;
         this.httpClient = new OkHttpClient();
         this.gson = gson;
+        this.hasher = hasher;
     }
 
     HttpUrl buildURL(QueryParameters params) {
@@ -58,7 +72,8 @@ public class ApiClient implements DisposableBean {
     }
 
     public void request(QueryParameters params,
-                        final Consumer<List<NewsType>> onSuccess,
+                        final Consumer<List<KeyValuePair<String, NewsTypeProtobuf.NewsType>>>
+                                onSuccess,
                         final BiConsumer<Integer, BufferedSource> onRejectedRequest,
                         final Consumer<IOException> onFailure) {
 
@@ -74,7 +89,24 @@ public class ApiClient implements DisposableBean {
                 if (response.isSuccessful()) {
                     try {
                         String body = response.body().source().readString(Charset.defaultCharset());
-                        List<NewsType> data = gson.fromJson(body, NewsType.newsCollectionType);
+                        List<KeyValuePair<String, NewsTypeProtobuf.NewsType>> data = StreamSupport
+                                .stream(gson.fromJson(body, JsonArray.class).spliterator(),
+                                        false)
+                                .map(jsonElement -> {
+                                    String jsonString = jsonElement.toString();
+                                    Reader jsonElementReader = new StringReader(jsonString);
+                                    Message.Builder builder = NewsTypeProtobuf.NewsType.newBuilder();
+                                    try {
+                                        JsonFormat.parser().ignoringUnknownFields().merge(jsonElementReader, builder);
+                                    } catch (IOException e) {
+                                        e.printStackTrace();    // lose
+                                        return null;
+                                    }
+                                    String hash = hasher.hash(jsonString);
+                                    return pairOf(hash, (NewsTypeProtobuf.NewsType) builder.build());
+                                })
+                                .collect(Collectors.toList());
+
                         onSuccess.accept(data);
                     } catch (IOException e) {
                         onRejectedRequest.accept(response.code(), response.body().source());

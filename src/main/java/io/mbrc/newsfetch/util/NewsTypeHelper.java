@@ -1,16 +1,26 @@
-package io.mbrc.newsfetch.client;
+package io.mbrc.newsfetch.util;
 
 
 import com.google.gson.Gson;
 import okio.BufferedSource;
-import org.springframework.stereotype.Component;
 
 import java.nio.charset.Charset;
 
-@Component
 public class NewsTypeHelper {
 
-    public static Gson gson;
+    private static NewsTypeHelper instance;
+
+    public static NewsTypeHelper getInstance(Gson gson) {
+        if (instance == null) {
+            synchronized (NewsTypeHelper.class) {
+                if (instance == null)
+                    instance = new NewsTypeHelper(gson);
+            }
+        }
+        return instance;
+    }
+
+    public Gson gson;
 
     private NewsTypeHelper(Gson gson) {
         this.gson = gson;

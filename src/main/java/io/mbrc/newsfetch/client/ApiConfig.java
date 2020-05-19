@@ -13,10 +13,11 @@ public class ApiConfig {
    private final String path;
 
    public ApiConfig(
-           @Value("${newsfetch.apiToken}") String apiToken,
-           @Value("${newsfetch.scheme}") String scheme,
-           @Value("${newsfetch.host}") String host,
-           @Value("${newsfetch.path}") String path) {
+           @Value("${client.apiToken}") String apiToken,
+           @Value("${client.scheme}") String scheme,
+           @Value("${client.host}") String host,
+           @Value("${client.path}") String path
+   ) {
       this.apiToken = apiToken;
       this.scheme = scheme;
       this.host = host;

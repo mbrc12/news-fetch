@@ -1,0 +1,108 @@
+syntax = "proto3";
+
+option java_outer_classname = "NewsTypeProtobuf";
+option java_package = "io.mbrc.newsfetch.util";
+
+//public class Element {
+//public String type;
+//public Boolean primary;
+//public String url;
+//public Object width;
+//public Object height;
+//public Object title;
+//public Object alternative;
+//}
+
+message Element {
+    string type = 1;
+    bool primary = 2;
+    string url = 3;
+    string width = 4;
+    string height = 5;
+    string title = 6;
+    string alternative = 7;
+}
+
+//public class Website {
+//public String name;
+//public String hostName;
+//public String domainName;
+//public String iconURL;
+//public String countryName;
+//public String countryCode;
+//public Object region;
+//}
+
+message Website {
+    string name = 1;
+    string hostName = 2;
+    string domainName = 3;
+    string iconURL = 4;
+    string countryName = 5;
+    string countryCode = 6;
+    string region = 7;
+}
+
+//public class MetaData {
+//
+//@Data
+//public class ReadTime {
+//public String type;
+//public Float seconds;
+//}
+//
+//@Data
+//public class Category {
+//public String type;
+//public String country;
+//public String region;
+//public String category;
+//public Object countryCode;
+//}
+//
+//public ReadTime readTime;
+//public Category category;
+//}
+
+message ReadTime {
+    string type = 1;
+    float seconds = 2;
+}
+
+message Category {
+    string type = 1;
+    string country = 2;
+    string region = 3;
+    string category = 4;
+    string countryCode = 5;
+}
+
+message MetaData {
+    ReadTime readTime = 1;
+    Category category = 2;
+}
+
+//public String title;
+//public String language;
+//public String text;
+//public String structuredText;
+//public String url;
+//public Element[] elements;
+//public Website website;
+//public MetaData metadata;
+//public Float score;
+
+message NewsType {
+    string id = 1;
+    string publishDate = 2;
+    string discoverDate = 3;
+    string language = 4;
+    string title = 5;
+    string url = 6;
+    string text = 7;
+    string structuredText = 8;
+    float score = 9;
+    repeated Element elements = 10;
+    Website website = 11;
+    MetaData metadata = 12;
+}
