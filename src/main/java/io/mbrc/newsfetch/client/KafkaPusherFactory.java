@@ -54,13 +54,25 @@ public class KafkaPusherFactory {
             this.producer = new KafkaProducer<>(props);
         }
 
-        private void send(String key, NewsType news,
-                          @NotNull BiConsumer<RecordMetadata, Exception> consumer) {
+        public void send(String key, NewsType news,
+                         @NotNull BiConsumer<RecordMetadata, Exception> consumer) {
 
             ProducerRecord<String, NewsType> record =
-                    new ProducerRecord<>(key, news);
+                    new ProducerRecord<>(topic, key, news);
 
             this.producer.send(record, consumer::accept);
+        }
+
+        public void sendSync(String key, NewsType news,
+                             @NotNull BiConsumer<RecordMetadata, Exception> consumer) {
+            ProducerRecord<String, NewsType> record =
+                    new ProducerRecord<>(topic, key, news);
+            try {
+                RecordMetadata metadata = producer.send(record).get();
+                consumer.accept(metadata, null);
+            } catch (Exception e) {
+                consumer.accept(null, e);
+            }
         }
     }
 }

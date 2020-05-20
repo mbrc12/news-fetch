@@ -6,6 +6,7 @@ import io.mbrc.newsfetch.util.GsonUTCDateAdapter;
 import io.mbrc.newsfetch.util.NewsTypeHelper;
 import org.springframework.context.annotation.*;
 
+import java.time.Duration;
 import java.util.Date;
 
 @Configuration
@@ -26,6 +27,14 @@ public class SpringConfig {
     @Scope("singleton")
     public NewsTypeHelper newsTypeHelper() {
         return NewsTypeHelper.getInstance(gson());
+    }
+
+    // A rate limiter that allows 200 calls per 15 minutes.
+    // Each time, Spring will generate a new instance, so prototype scope.
+    @Bean
+    @Scope("prototype")
+    public RateLimiter rateLimiter() {
+        return new RateLimiter(200, Duration.ofMinutes(15));
     }
 
     @Bean

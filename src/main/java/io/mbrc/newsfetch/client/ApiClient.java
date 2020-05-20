@@ -8,6 +8,7 @@ import io.mbrc.newsfetch.util.NewsType;
 import lombok.extern.slf4j.Slf4j;
 import okhttp3.*;
 import okio.BufferedSource;
+import org.jetbrains.annotations.NotNull;
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.stereotype.Component;
 
@@ -67,6 +68,50 @@ public class ApiClient implements DisposableBean {
         return httpClient.newCall(request);
     }
 
+    // We use a functional style here. The work of responseConsumer is to use two
+    // functions, onSuccess and onRejectedRequest, to produce a new function that
+    // works on a Response object, and invokes them suitably, after pre-processing
+    // the Response object. This facilitates an unified approach of implementing
+    // request and requestSync, with the same signature. Their implementations are
+    // also considerably simplified.
+
+    public Consumer<Response> responseConsumer(
+            final Consumer<List<KeyValuePair<String, NewsType>>> onSuccess,
+            final BiConsumer<Integer, BufferedSource> onRejectedRequest
+    ) {
+        return response -> {
+            if (response.isSuccessful()) {
+                try {
+                    String body = response.body().source().readString(Charset.defaultCharset());
+                    List<KeyValuePair<String, NewsType>> data = StreamSupport
+                            .stream(gson.fromJson(body, JsonArray.class).spliterator(),
+                                    false)
+                            .map(jsonElement -> {
+                                String jsonString = jsonElement.toString();
+                                NewsType news = gson.fromJson(jsonString, NewsType.class);
+                                String hash = hasher.hash(jsonString);
+                                return pairOf(hash, news);
+                            })
+                            .collect(Collectors.toList());
+
+                    onSuccess.accept(data);
+                } catch (IOException e) {
+                    onRejectedRequest.accept(response.code(), response.body().source());
+                } catch (NullPointerException e) {
+                    log.error("Response body is null.");
+                    e.printStackTrace();
+                }
+            } else {
+                try {
+                    onRejectedRequest.accept(response.code(), response.body().source());
+                } catch (NullPointerException e) {
+                    log.error("Response body is null.");
+                    e.printStackTrace();
+                }
+            }
+        };
+    }
+
     public void request(QueryParameters params,
                         final Consumer<List<KeyValuePair<String, NewsType>>>
                                 onSuccess,
@@ -76,43 +121,28 @@ public class ApiClient implements DisposableBean {
         Call request = requestBuilder(params);
         request.enqueue(new Callback() {
             @Override
-            public void onFailure(Call call, IOException e) {
+            public void onFailure(@NotNull Call call, @NotNull IOException e) {
                 onFailure.accept(e);
             }
 
             @Override
-            public void onResponse(Call call, Response response) {
-                if (response.isSuccessful()) {
-                    try {
-                        String body = response.body().source().readString(Charset.defaultCharset());
-                        List<KeyValuePair<String, NewsType>> data = StreamSupport
-                                .stream(gson.fromJson(body, JsonArray.class).spliterator(),
-                                        false)
-                                .map(jsonElement -> {
-                                    String jsonString = jsonElement.toString();
-                                    NewsType news = gson.fromJson(jsonString, NewsType.class);
-                                    String hash = hasher.hash(jsonString);
-                                    return pairOf(hash, news);
-                                })
-                                .collect(Collectors.toList());
-
-                        onSuccess.accept(data);
-                    } catch (IOException e) {
-                        onRejectedRequest.accept(response.code(), response.body().source());
-                    } catch (NullPointerException e) {
-                        log.error("Response body is null.");
-                        e.printStackTrace();
-                    }
-                } else {
-                    try {
-                        onRejectedRequest.accept(response.code(), response.body().source());
-                    } catch (NullPointerException e) {
-                        log.error("Response body is null.");
-                        e.printStackTrace();
-                    }
-                }
+            public void onResponse(@NotNull Call call, @NotNull Response response) {
+                responseConsumer(onSuccess, onRejectedRequest).accept(response);
             }
         });
+    }
+
+    // Same as request, but waits till request is done.
+    // Rudimentary implementation. Revise later.
+    public void requestSync(QueryParameters params,
+                            final Consumer<List<KeyValuePair<String, NewsType>>> onSuccess,
+                            final BiConsumer<Integer, BufferedSource> onRejectedRequest,
+                            final Consumer<IOException> onFailure) {
+        try (Response response = requestBuilder(params).execute()) {
+            responseConsumer(onSuccess, onRejectedRequest).accept(response);
+        } catch (IOException e) {
+            onFailure.accept(e);
+        }
     }
 
     // Needed to safely shutdown everything when all is done with
