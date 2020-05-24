@@ -1,21 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2aa7b304-d9db-42db-886c-2ffde1b73dbc" name="Default Changelist" comment="Added Concurrent Receiver / ES pusher">
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/recvr/ESClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/recvr/KafkaReceiverFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/recvr/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/recvr/Recvr.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/recvr/SpringConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/news-fetch.iml" beforeDir="false" afterPath="$PROJECT_DIR$/news-fetch.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/news-fetch.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/news-fetch.ipr" afterDir="false" />
+    <list default="true" id="2aa7b304-d9db-42db-886c-2ffde1b73dbc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/news-fetch.iws" beforeDir="false" afterPath="$PROJECT_DIR$/news-fetch.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/news-fetch.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/news-fetch.main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/news-fetch.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/news-fetch.test.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/client/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/client/SpringConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/client/SpringConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/recvr/ESClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/recvr/ESClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/recvr/KafkaReceiverFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/recvr/KafkaReceiverFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/recvr/Recvr.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/recvr/Recvr.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/recvr/SpringConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/recvr/SpringConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -258,7 +251,7 @@
       <workItem from="1590296054636" duration="1000" />
       <workItem from="1590296085743" duration="28000" />
       <workItem from="1590296474375" duration="9402000" />
-      <workItem from="1590306623818" duration="8746000" />
+      <workItem from="1590306623818" duration="13626000" />
     </task>
     <task id="LOCAL-00001" summary="First commit. Basic Client operations, and basic deserialization from Json.">
       <created>1589830430030</created>
@@ -295,7 +288,21 @@
       <option name="project" value="LOCAL" />
       <updated>1589975485058</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added Concurrent Receiver / ES pusher implementation.">
+      <created>1590315600167</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1590315600167</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Added Concurrent Receiver / ES pusher implementation - 2.">
+      <created>1590315663848</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1590315663848</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="UpdateCopyrightCheckinHandler">
@@ -309,7 +316,9 @@
     <MESSAGE value="Added Kafka client, Kafka serializers, and Protobuf for news type." />
     <MESSAGE value="Reverted to Gson / POJO NewsType / StringSerializer for kafka Serialization." />
     <MESSAGE value="Added Concurrent Client and Rate Limiter. A sample application.properties is also supplied." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Concurrent Client and Rate Limiter. A sample application.properties is also supplied." />
+    <MESSAGE value="Added Concurrent Receiver / ES pusher implementation." />
+    <MESSAGE value="Added Concurrent Receiver / ES pusher implementation - 2." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Concurrent Receiver / ES pusher implementation - 2." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
@@ -327,10 +336,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="725" y="440" width="467" height="238" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1080@0.0.1920.1080" timestamp="1589870485648" />
-    <state x="288" y="123" key="CommitChangelistDialog2" timestamp="1590315570630">
+    <state x="288" y="123" key="CommitChangelistDialog2" timestamp="1590315663772">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="288" y="123" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1590315570630" />
+    <state x="288" y="123" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1590315663772" />
     <state x="742" y="314" key="FileChooserDialogImpl" timestamp="1589813880571">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

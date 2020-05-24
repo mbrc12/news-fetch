@@ -58,6 +58,9 @@ public class KafkaReceiverFactory {
                     ConsumerRecords<String, NewsType> records = consumer.poll(pollTimeout);
                     records.forEach(record -> onEach.accept(record.key(), record.value()));
                 }
+            } catch (Exception e) {
+                log.error("Some error happened: ");
+                e.printStackTrace();
             } finally {
                 consumer.close();
             }

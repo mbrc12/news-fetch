@@ -1,5 +1,6 @@
 package io.mbrc.newsfetch.recvr;
 
+import com.google.gson.Gson;
 import io.mbrc.newsfetch.util.KeyValuePair;
 import io.mbrc.newsfetch.util.NewsType;
 import lombok.extern.slf4j.Slf4j;
@@ -30,13 +31,16 @@ import static io.mbrc.newsfetch.util.NewsTypeHelper.trimmedTitleOf;
 public class ESClient implements DisposableBean {
     private final RestHighLevelClient client;
     private final String index;
+    private final Gson gson;
 
     private ESClient(
             @Value("${recvr.esRequestScheme}") String requestScheme,
             @Value("${recvr.esRequestHost}") String requestHost,
             @Value("${recvr.esRequestPort}") Integer requestPort,
-            @Value("${recvr.esIndex}") String esIndex
+            @Value("${recvr.esIndex}") String esIndex,
+            Gson gson
     ) throws IOException {
+        this.gson = gson;
         this.client = new RestHighLevelClient(
                 RestClient.builder(
                         new HttpHost(requestHost, requestPort, requestScheme)));
@@ -75,7 +79,7 @@ public class ESClient implements DisposableBean {
 
             IndexRequest request = new IndexRequest(this.index);
             request.id(hash);
-            request.source(news, XContentType.JSON);
+            request.source(gson.toJson(news), XContentType.JSON);
 
             try {
                 IndexResponse response = client.index(request, RequestOptions.DEFAULT);
