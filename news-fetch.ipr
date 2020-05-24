@@ -70,7 +70,7 @@
       <module fileurl="file://$PROJECT_DIR$/news-fetch.test.iml" filepath="$PROJECT_DIR$/news-fetch.test.iml" />
     </modules>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_13" default="false" project-jdk-name="11" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="false" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
   <component name="RemoteRepositoriesConfiguration">
@@ -115,6 +115,15 @@
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/ch.qos.logback/logback-core/1.2.3/3ebabe69eba0196af9ad3a814f723fb720b9101e/logback-core-1.2.3-sources.jar!/" />
       </SOURCES>
     </library>
+    <library name="Gradle: com.carrotsearch:hppc:0.8.1">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.carrotsearch/hppc/0.8.1/ffc7ba8f289428b9508ab484b8001dea944ae603/hppc-0.8.1.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.carrotsearch/hppc/0.8.1/b338e50c3f98c7ec2bf67a5efb7fa8726a4a9b2d/hppc-0.8.1-sources.jar!/" />
+      </SOURCES>
+    </library>
     <library name="Gradle: com.fasterxml.jackson.core:jackson-annotations:2.10.2">
       <CLASSES>
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.10.2/3a13b6105946541b8d4181a0506355b5fae63260/jackson-annotations-2.10.2.jar!/" />
@@ -124,13 +133,13 @@
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.10.2/4ecdff8070b3ad24162be3441e58f7d244bbd065/jackson-annotations-2.10.2-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Gradle: com.fasterxml.jackson.core:jackson-core:2.10.2">
+    <library name="Gradle: com.fasterxml.jackson.core:jackson-core:2.10.4">
       <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.10.2/73d4322a6bda684f676a2b5fe918361c4e5c7cca/jackson-core-2.10.2.jar!/" />
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.10.4/8796585e716440d6dd5128b30359932a9eb74d0d/jackson-core-2.10.4.jar!/" />
       </CLASSES>
       <JAVADOC />
       <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.10.2/387baaa5f80e83cd14b49fdb8f7aeb6989d6f35a/jackson-core-2.10.2-sources.jar!/" />
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.10.4/45811022eca6cd0f7d45b10e1701ed81153a482a/jackson-core-2.10.4-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Gradle: com.fasterxml.jackson.core:jackson-databind:2.10.2">
@@ -142,6 +151,15 @@
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.10.2/f65a9cc329f6a29eff8812536153a89a7562dbc/jackson-databind-2.10.2-sources.jar!/" />
       </SOURCES>
     </library>
+    <library name="Gradle: com.fasterxml.jackson.dataformat:jackson-dataformat-cbor:2.10.4">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.dataformat/jackson-dataformat-cbor/2.10.4/c854bb2d46138198cb5d4aae86ef6c04b8bc1e70/jackson-dataformat-cbor-2.10.4.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.dataformat/jackson-dataformat-cbor/2.10.4/9873f033479df5ed69aee67e0fbc531c15b1fe43/jackson-dataformat-cbor-2.10.4-sources.jar!/" />
+      </SOURCES>
+    </library>
     <library name="Gradle: com.fasterxml.jackson.dataformat:jackson-dataformat-csv:2.10.2">
       <CLASSES>
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.dataformat/jackson-dataformat-csv/2.10.2/b80d499bd4853c784ffd9112aee2ecf5817c28be/jackson-dataformat-csv-2.10.2.jar!/" />
@@ -149,6 +167,24 @@
       <JAVADOC />
       <SOURCES>
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.dataformat/jackson-dataformat-csv/2.10.2/7719cab830b568530be2d04634d558ef670e5574/jackson-dataformat-csv-2.10.2-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: com.fasterxml.jackson.dataformat:jackson-dataformat-smile:2.10.4">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.dataformat/jackson-dataformat-smile/2.10.4/c872c2e224cfdcc5481037d477f5890f05c001b4/jackson-dataformat-smile-2.10.4.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.dataformat/jackson-dataformat-smile/2.10.4/36f81cf059ef62986863da9e2c6a105461a35def/jackson-dataformat-smile-2.10.4-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.10.4">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.dataformat/jackson-dataformat-yaml/2.10.4/8a7f3c6b640bd89214807af6d8160b4b3b16af93/jackson-dataformat-yaml-2.10.4.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.dataformat/jackson-dataformat-yaml/2.10.4/d752f41786cc04fca84c566ebef7a101254a624a/jackson-dataformat-yaml-2.10.4-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Gradle: com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.10.2">
@@ -185,6 +221,15 @@
       <JAVADOC />
       <SOURCES>
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.luben/zstd-jni/1.4.4-7/6f5c9b7b61c1aa811643ac2dba0eab2cf4f9e760/zstd-jni-1.4.4-7-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: com.github.spullara.mustache.java:compiler:0.9.6">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.spullara.mustache.java/compiler/0.9.6/1b8707299c34406ed0ba40bbf8513352ac4765c9/compiler-0.9.6.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.spullara.mustache.java/compiler/0.9.6/a23ce3f24ae450f13f52aaa336bf836759f22331/compiler-0.9.6-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Gradle: com.google.code.findbugs:jsr305:3.0.2">
@@ -284,6 +329,15 @@
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/2.6.0/e4acc665cd63b0b3813f3eba76dc0dd814f75c40/okio-2.6.0-sources.jar!/" />
       </SOURCES>
     </library>
+    <library name="Gradle: com.tdunning:t-digest:3.2">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.tdunning/t-digest/3.2/2ab94758b0276a8a26102adf8d528cf6d0567b9a/t-digest-3.2.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.tdunning/t-digest/3.2/b1858d66a80a93f61f048cf542fc2751ec7971bf/t-digest-3.2-sources.jar!/" />
+      </SOURCES>
+    </library>
     <library name="Gradle: com.thoughtworks.paranamer:paranamer:2.8">
       <CLASSES>
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.thoughtworks.paranamer/paranamer/2.8/619eba74c19ccf1da8ebec97a2d7f8ba05773dd6/paranamer-2.8.jar!/" />
@@ -327,6 +381,15 @@
       <JAVADOC />
       <SOURCES>
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/commons-codec/commons-codec/1.14/674f0614376ac38259b01bcc67189ef240234569/commons-codec-1.14-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: commons-logging:commons-logging:1.1.3">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/commons-logging/commons-logging/1.1.3/f6f66e966c70a83ffbdb6f17a0919eaf7c8aca7f/commons-logging-1.1.3.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/commons-logging/commons-logging/1.1.3/28bb0405fddaf04f15058fbfbe01fe2780d7d3b6/commons-logging-1.1.3-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Gradle: io.netty:netty-buffer:4.1.45.Final">
@@ -401,6 +464,15 @@
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.netty/netty-transport/4.1.45.Final/aedd9954cb64733da24ea2b5a3a5726d2b9a365d/netty-transport-4.1.45.Final-sources.jar!/" />
       </SOURCES>
     </library>
+    <library name="Gradle: joda-time:joda-time:2.10.4">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/joda-time/joda-time/2.10.4/8c10bb8815109067ce3c91a8e547b5a52e8a1c1a/joda-time-2.10.4.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/joda-time/joda-time/2.10.4/4001d385e8be893bc4b82cd0091f79a9ac5976dc/joda-time-2.10.4-sources.jar!/" />
+      </SOURCES>
+    </library>
     <library name="Gradle: net.sf.jopt-simple:jopt-simple:5.0.4">
       <CLASSES>
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.sf.jopt-simple/jopt-simple/5.0.4/4fdac2fbe92dfad86aa6e9301736f6b4342a3f5c/jopt-simple-5.0.4.jar!/" />
@@ -408,6 +480,42 @@
       <JAVADOC />
       <SOURCES>
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.sf.jopt-simple/jopt-simple/5.0.4/950831646d014c9162999019a3cb17d5fc01ac0d/jopt-simple-5.0.4-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: org.apache.httpcomponents:httpasyncclient:4.1.4">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpasyncclient/4.1.4/f3a3240681faae3fa46b573a4c7e50cec9db0d86/httpasyncclient-4.1.4.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpasyncclient/4.1.4/1e5c5d894e85baa50550e9cb8d8ddc112fbea178/httpasyncclient-4.1.4-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: org.apache.httpcomponents:httpclient:4.5.10">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpclient/4.5.10/7ca2e4276f4ef95e4db725a8cd4a1d1e7585b9e5/httpclient-4.5.10.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpclient/4.5.10/b88c634257720718f33caebc6fc6ec52e4cce190/httpclient-4.5.10-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: org.apache.httpcomponents:httpcore-nio:4.4.12">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpcore-nio/4.4.12/84cd29eca842f31db02987cfedea245af020198b/httpcore-nio-4.4.12.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpcore-nio/4.4.12/8874d7eaacedca57d3c9a2af4ae0e8ea867142ab/httpcore-nio-4.4.12-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: org.apache.httpcomponents:httpcore:4.4.12">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpcore/4.4.12/21ebaf6d532bc350ba95bd81938fa5f0e511c132/httpcore-4.4.12.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpcore/4.4.12/8b6f2545070a53107665c1e390e690a859bd2266/httpcore-4.4.12-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Gradle: org.apache.kafka:kafka-clients:2.5.0">
@@ -426,6 +534,141 @@
       <JAVADOC />
       <SOURCES>
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.kafka/kafka_2.13/2.5.0/9d42452c6ca8c8db4e36c0e445b6b4a37af5c4fa/kafka_2.13-2.5.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: org.apache.logging.log4j:log4j-api:2.11.1">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-api/2.11.1/268f0fe4df3eefe052b57c87ec48517d64fb2a10/log4j-api-2.11.1.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-api/2.11.1/acf35297ef03716fc14e11e2978d7c749ed3f7e5/log4j-api-2.11.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: org.apache.lucene:lucene-analyzers-common:8.5.1">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.lucene/lucene-analyzers-common/8.5.1/704685ddf536e1af4da025b6e6f4e50b9846ef18/lucene-analyzers-common-8.5.1.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.lucene/lucene-analyzers-common/8.5.1/b529dae8f90f4f9e19a5116383d5af95c0920f6d/lucene-analyzers-common-8.5.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: org.apache.lucene:lucene-backward-codecs:8.5.1">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.lucene/lucene-backward-codecs/8.5.1/ab12c24a7c33ef5dfe8b57f17f67fec4a3fee1c/lucene-backward-codecs-8.5.1.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.lucene/lucene-backward-codecs/8.5.1/2e963809e8450c1cac6db0c3b98281dab0fdea94/lucene-backward-codecs-8.5.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: org.apache.lucene:lucene-core:8.5.1">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.lucene/lucene-core/8.5.1/24212de43c19269f5211f3e79eb2f414c4a0254b/lucene-core-8.5.1.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.lucene/lucene-core/8.5.1/f3afa0219d0090f94cb941165466b22bc481e069/lucene-core-8.5.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: org.apache.lucene:lucene-grouping:8.5.1">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.lucene/lucene-grouping/8.5.1/4404f3ff6341b7518843d09141df743bf91a8284/lucene-grouping-8.5.1.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.lucene/lucene-grouping/8.5.1/bfd66802f599a780a29d0ca7f77632d844a3b94e/lucene-grouping-8.5.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: org.apache.lucene:lucene-highlighter:8.5.1">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.lucene/lucene-highlighter/8.5.1/142f5f249aa0803f8283a3d08615e37a56f40e8a/lucene-highlighter-8.5.1.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.lucene/lucene-highlighter/8.5.1/174c104fba543520267454d57ce43750e5ebea9b/lucene-highlighter-8.5.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: org.apache.lucene:lucene-join:8.5.1">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.lucene/lucene-join/8.5.1/b0a48846662fc504bd7796b5506dad94981fca08/lucene-join-8.5.1.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.lucene/lucene-join/8.5.1/47b9d41ee408bda36033b6ce77597fe4fb3429b3/lucene-join-8.5.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: org.apache.lucene:lucene-memory:8.5.1">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.lucene/lucene-memory/8.5.1/ba9e24b90323aacc98a4ac661ac34bfbf0ed66d8/lucene-memory-8.5.1.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.lucene/lucene-memory/8.5.1/ca01c54d1886bc07451a8aa072aa1a6a7b5c2dfa/lucene-memory-8.5.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: org.apache.lucene:lucene-misc:8.5.1">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.lucene/lucene-misc/8.5.1/a0418e9bc16fc876448accb828a6ca38ed63d4a8/lucene-misc-8.5.1.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.lucene/lucene-misc/8.5.1/c34e110247256996c7f87fbe8e88da2f38c9d1cc/lucene-misc-8.5.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: org.apache.lucene:lucene-queries:8.5.1">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.lucene/lucene-queries/8.5.1/269c67a4ee9b806cfdacddc211744243cbcbd127/lucene-queries-8.5.1.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.lucene/lucene-queries/8.5.1/bc2bf59ea55e5edca4c7ec14d394d95cf55017d1/lucene-queries-8.5.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: org.apache.lucene:lucene-queryparser:8.5.1">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.lucene/lucene-queryparser/8.5.1/ee5ba0e07a178a32987b0a92da149f2104e26dd9/lucene-queryparser-8.5.1.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.lucene/lucene-queryparser/8.5.1/adfb2b3161e128971fa70e2d6f90f13f6b939a78/lucene-queryparser-8.5.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: org.apache.lucene:lucene-sandbox:8.5.1">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.lucene/lucene-sandbox/8.5.1/f1461680109e499d8c58dcaf5d314aeeef41d99a/lucene-sandbox-8.5.1.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.lucene/lucene-sandbox/8.5.1/ee6bede51e130385f9b79a1d4335c600bdcf44c5/lucene-sandbox-8.5.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: org.apache.lucene:lucene-spatial-extras:8.5.1">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.lucene/lucene-spatial-extras/8.5.1/eece1ef3f919634c79b9ae9d99264ac9efa4276c/lucene-spatial-extras-8.5.1.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.lucene/lucene-spatial-extras/8.5.1/9102bbb738852c5fd059f8fc139e3071e4a96b18/lucene-spatial-extras-8.5.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: org.apache.lucene:lucene-spatial3d:8.5.1">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.lucene/lucene-spatial3d/8.5.1/a8fb2771ac562d60a3c945a4cef0e3742c390329/lucene-spatial3d-8.5.1.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.lucene/lucene-spatial3d/8.5.1/2fc49d04135124430f3425d45877cd19eb10ae7e/lucene-spatial3d-8.5.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: org.apache.lucene:lucene-suggest:8.5.1">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.lucene/lucene-suggest/8.5.1/b5613f4995836fd9edae5925ed38559460721492/lucene-suggest-8.5.1.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.lucene/lucene-suggest/8.5.1/a2dd4ff36c95b6e5adb2f7cea9a0af34234fcf76/lucene-suggest-8.5.1-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Gradle: org.apache.yetus:audience-annotations:0.5.0">
@@ -471,6 +714,141 @@
       <JAVADOC />
       <SOURCES>
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.checkerframework/checker-compat-qual/2.5.5/54d4253d4d8723096a95b7551bd5639e7e2affba/checker-compat-qual-2.5.5-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: org.elasticsearch.client:elasticsearch-rest-client:7.7.0">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.elasticsearch.client/elasticsearch-rest-client/7.7.0/5fc25eec3940bc0e9b0ffddcf50554a609e9db8e/elasticsearch-rest-client-7.7.0.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.elasticsearch.client/elasticsearch-rest-client/7.7.0/342af6c026f3ec1ed4a246a3b40f8e8304cd93df/elasticsearch-rest-client-7.7.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: org.elasticsearch.client:elasticsearch-rest-high-level-client:7.7.0">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.elasticsearch.client/elasticsearch-rest-high-level-client/7.7.0/877368391d175e04261275e82c715518d62a182c/elasticsearch-rest-high-level-client-7.7.0.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.elasticsearch.client/elasticsearch-rest-high-level-client/7.7.0/60d7881a490300b83b950a01dd13556d2c89361/elasticsearch-rest-high-level-client-7.7.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: org.elasticsearch.plugin:aggs-matrix-stats-client:7.7.0">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.elasticsearch.plugin/aggs-matrix-stats-client/7.7.0/8bf6424a801016e4b3db864fb1802456ab9c28f1/aggs-matrix-stats-client-7.7.0.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.elasticsearch.plugin/aggs-matrix-stats-client/7.7.0/2f4fc01548f28ecb657c5fd492d3db861f503ff6/aggs-matrix-stats-client-7.7.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: org.elasticsearch.plugin:lang-mustache-client:7.7.0">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.elasticsearch.plugin/lang-mustache-client/7.7.0/8239fae7e571b222be948b9e51f2918ef9fd1130/lang-mustache-client-7.7.0.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.elasticsearch.plugin/lang-mustache-client/7.7.0/220b6d6d4393e233d58bde2a75ef6faeed4bd9c2/lang-mustache-client-7.7.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: org.elasticsearch.plugin:mapper-extras-client:7.7.0">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.elasticsearch.plugin/mapper-extras-client/7.7.0/f3c1e57269de42364d37e7f22282cab40027d2f6/mapper-extras-client-7.7.0.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.elasticsearch.plugin/mapper-extras-client/7.7.0/9914470a93195ba445434faaa478b9d6e2c61740/mapper-extras-client-7.7.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: org.elasticsearch.plugin:parent-join-client:7.7.0">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.elasticsearch.plugin/parent-join-client/7.7.0/82720e58077f8b0ace2e80eec486d2a97406fa4e/parent-join-client-7.7.0.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.elasticsearch.plugin/parent-join-client/7.7.0/e4d211d983707c504df11786b9a4762f4890b0b4/parent-join-client-7.7.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: org.elasticsearch.plugin:rank-eval-client:7.7.0">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.elasticsearch.plugin/rank-eval-client/7.7.0/ad32181a2e3bb3b7151b59cdd0da74aa3ce512a6/rank-eval-client-7.7.0.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.elasticsearch.plugin/rank-eval-client/7.7.0/219d7d6fec3f2592224f8606a2dadbdfe2369db4/rank-eval-client-7.7.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: org.elasticsearch:elasticsearch-cli:7.7.0">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.elasticsearch/elasticsearch-cli/7.7.0/d346cd223a324b07f08cf6d2e0bd0614d0ac65d6/elasticsearch-cli-7.7.0.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.elasticsearch/elasticsearch-cli/7.7.0/db93d32fdfb398b32d7b3c619dd928c542237f73/elasticsearch-cli-7.7.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: org.elasticsearch:elasticsearch-core:7.7.0">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.elasticsearch/elasticsearch-core/7.7.0/7fa4e95d35c625e9d4381961ad62b3bb4b27c8d6/elasticsearch-core-7.7.0.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.elasticsearch/elasticsearch-core/7.7.0/6d59965461a8a01160b54f031ae996224d1db5a6/elasticsearch-core-7.7.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: org.elasticsearch:elasticsearch-geo:7.7.0">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.elasticsearch/elasticsearch-geo/7.7.0/d36a21bb00bd1923374d2910c3cf5328b624e7ca/elasticsearch-geo-7.7.0.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.elasticsearch/elasticsearch-geo/7.7.0/15d8780a4665d842256191a6b3482f411d548db5/elasticsearch-geo-7.7.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: org.elasticsearch:elasticsearch-secure-sm:7.7.0">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.elasticsearch/elasticsearch-secure-sm/7.7.0/306c7a5011f7434b421f67e8d6f505c7433f141a/elasticsearch-secure-sm-7.7.0.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.elasticsearch/elasticsearch-secure-sm/7.7.0/4ec832f988e4103b946852a52ff4f75ee9fe7311/elasticsearch-secure-sm-7.7.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: org.elasticsearch:elasticsearch-x-content:7.7.0">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.elasticsearch/elasticsearch-x-content/7.7.0/41e0728a095218a2a872da510fc7fde3914000fa/elasticsearch-x-content-7.7.0.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.elasticsearch/elasticsearch-x-content/7.7.0/fc7ccc58994060b72f9352d68df5a64cc601dd6f/elasticsearch-x-content-7.7.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: org.elasticsearch:elasticsearch:7.7.0">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.elasticsearch/elasticsearch/7.7.0/9e90b01794aefd3ccd56b3ffd396d6266daf59d2/elasticsearch-7.7.0.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.elasticsearch/elasticsearch/7.7.0/a46e333fe7e35b2b3f01dc73cab9c8b7ee688ea1/elasticsearch-7.7.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: org.elasticsearch:jna:4.5.1">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.elasticsearch/jna/4.5.1/da10908ae23dc59b19dc258e63aea1c44621dc3a/jna-4.5.1.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.elasticsearch/jna/4.5.1/965bf0f4cf5b71c2b1e9bb5a8d7b6919020e0492/jna-4.5.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: org.hdrhistogram:HdrHistogram:2.1.9">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hdrhistogram/HdrHistogram/2.1.9/e4631ce165eb400edecfa32e03d3f1be53dee754/HdrHistogram-2.1.9.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hdrhistogram/HdrHistogram/2.1.9/966a6429061192e62cc346462587253a726db6b7/HdrHistogram-2.1.9-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.3.71" type="kotlin.common">
@@ -678,6 +1056,15 @@
       <JAVADOC />
       <SOURCES>
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.xerial.snappy/snappy-java/1.1.7.3/83002a7c6641e17c16ecfad3342fb8e22033b775/snappy-java-1.1.7.3-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: org.yaml:snakeyaml:1.26">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.yaml/snakeyaml/1.26/a78a8747147d2c5807683e76ec2b633e95c14fe9/snakeyaml-1.26.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.yaml/snakeyaml/1.26/1f369166f21abc8c07e618c2b9c0897f405d0999/snakeyaml-1.26-sources.jar!/" />
       </SOURCES>
     </library>
   </component>

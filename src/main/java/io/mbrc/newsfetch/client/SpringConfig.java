@@ -10,7 +10,7 @@ import java.time.Duration;
 import java.util.Date;
 
 @Configuration
-@ComponentScan(basePackages = "io.mbrc.newsfetch")
+@ComponentScan(basePackages = {"io.mbrc.newsfetch.client", "io.mbrc.newsfetch.util"})
 @PropertySource("application.properties")
 public class SpringConfig {
 

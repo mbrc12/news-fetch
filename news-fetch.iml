@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module relativePaths="true" type="JAVA_MODULE" version="4">
   <component name="ExternalSystem" externalSystem="GRADLE" externalSystemModuleGroup="io.mbrc" externalSystemModuleVersion="1.0-SNAPSHOT" linkedProjectId="news-fetch" linkedProjectPath="$MODULE_DIR$" rootProjectPath="$MODULE_DIR$" />
-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_11" inherit-compiler-output="true">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/.gradle" />

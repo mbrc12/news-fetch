@@ -4,10 +4,12 @@ import io.mbrc.newsfetch.util.KeyValuePair;
 import io.mbrc.newsfetch.util.NewsType;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
+import org.jetbrains.annotations.NotNull;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
+import java.nio.charset.Charset;
 import java.time.Instant;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -22,7 +24,6 @@ import static io.mbrc.newsfetch.util.NewsTypeHelper.*;
 @Component
 public class Client {
 
-    private final KafkaPusherFactory kafkaPusherFactory;
     private final KafkaPusherFactory.KafkaPusher kafkaPusher;
     private final ApiClient apiClient;
     private final RateLimiter rateLimiter;
@@ -31,14 +32,13 @@ public class Client {
     private final Integer fetchLimitPerThread;
     private final Integer nKafkaSenderThreads;
 
-    private Client(KafkaPusherFactory kafkaPusherFactory,
+    private Client(@NotNull KafkaPusherFactory kafkaPusherFactory,
                    ApiClient apiClient,
                    RateLimiter rateLimiter,
                    @Value("${client.nThreads}") Integer nThreads,
                    @Value("${client.retryMillis}") Long retryMillis,
                    @Value("${client.fetchLimitPerThread}") Integer fetchLimitPerThread,
                    @Value("${client.nKafkaSenderThreads}") Integer nKafkaSenderThreads) {
-        this.kafkaPusherFactory = kafkaPusherFactory;
         this.kafkaPusher = kafkaPusherFactory.getInstance();
         this.apiClient = apiClient;
         this.rateLimiter = rateLimiter;
@@ -53,7 +53,7 @@ public class Client {
                 dateFormat(instant_1), dateFormat(instant_2));
     }
 
-    public void execute(LocalDate startDate, LocalDate endDate) {
+    public void execute(@NotNull LocalDate startDate, LocalDate endDate) {
 
         ExecutorService threadPool = Executors.newFixedThreadPool(this.nThreads);
         List<LocalDate> dateList = startDate.datesUntil(endDate).collect(Collectors.toList());
@@ -63,7 +63,7 @@ public class Client {
             log.info("Spawning worker for " + date.toString());
             String dateString = date.format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
             QueryParameters params = QueryParameters.builder()
-                    .limit(25)
+                    .limit(1)
                     .sortBy(QueryParameters.SortBy.DISCOVER_DATE)
                     .sortOrder(QueryParameters.SortOrder.ASC)
                     .build();
@@ -142,7 +142,7 @@ public class Client {
             stats.setLastFetched(null);
         }
 
-        public void sendViaKafka(KeyValuePair<String, NewsType> newsItem) {
+        public void sendViaKafka(@NotNull KeyValuePair<String, NewsType> newsItem) {
             String hash = newsItem.getKey();
             NewsType news = newsItem.getValue();
 
@@ -217,8 +217,15 @@ public class Client {
                                 }
                             },
                             (code, body) -> {
-                                log.error(String.format("Rejected Request. Code: %d.", code));
-                                failed.set(true);
+                                try {
+                                    log.error(String.format("Rejected Request. Code: %d. Body = %s",
+                                            code,
+                                            body.readString(Charset.defaultCharset())));
+                                } catch (IOException e) {
+                                    log.error("Rejected Request. Body could not be parsed.");
+                                } finally {
+                                    failed.set(true);
+                                }
                             },
                             (IOException e) -> {
                                 log.error("Failed to get data. Stacktrace: ");
