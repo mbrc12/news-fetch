@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2aa7b304-d9db-42db-886c-2ffde1b73dbc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/news-fetch.iws" beforeDir="false" afterPath="$PROJECT_DIR$/news-fetch.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/client/Client.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -247,7 +246,8 @@
       <workItem from="1590296054636" duration="1000" />
       <workItem from="1590296085743" duration="28000" />
       <workItem from="1590296474375" duration="9402000" />
-      <workItem from="1590306623818" duration="14755000" />
+      <workItem from="1590306623818" duration="17115000" />
+      <workItem from="1590346668928" duration="1791000" />
     </task>
     <task id="LOCAL-00001" summary="First commit. Basic Client operations, and basic deserialization from Json.">
       <created>1589830430030</created>
@@ -305,7 +305,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590321990795</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Slight changes to configuration.">
+      <created>1590323036699</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1590323036699</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="UpdateCopyrightCheckinHandler">
@@ -322,16 +329,25 @@
     <MESSAGE value="Added Concurrent Receiver / ES pusher implementation." />
     <MESSAGE value="Added Concurrent Receiver / ES pusher implementation - 2." />
     <MESSAGE value="Fixed issues in ESClient and logback.xml." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed issues in ESClient and logback.xml." />
+    <MESSAGE value="Slight changes to configuration." />
+    <option name="LAST_COMMIT_MESSAGE" value="Slight changes to configuration." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="838" y="442" key="#Notifications" timestamp="1590323194063">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="838" y="442" key="#Notifications/0.0.1920.1080@0.0.1920.1080" timestamp="1590323194063" />
     <state x="559" y="214" key="#Plugins" timestamp="1589885498659">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="559" y="214" key="#Plugins/0.0.1920.1080@0.0.1920.1080" timestamp="1589885498659" />
+    <state x="447" y="147" key="#Project_Structure" timestamp="1590324059685">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="447" y="147" key="#Project_Structure/0.0.1920.1080@0.0.1920.1080" timestamp="1590324059685" />
     <state x="772" y="278" key="#com.intellij.ide.util.MemberChooser" timestamp="1589826050832">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -340,10 +356,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="725" y="440" width="467" height="238" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1080@0.0.1920.1080" timestamp="1589870485648" />
-    <state x="288" y="123" key="CommitChangelistDialog2" timestamp="1590321990687">
+    <state x="288" y="123" key="CommitChangelistDialog2" timestamp="1590323036620">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="288" y="123" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1590321990687" />
+    <state x="288" y="123" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1590323036620" />
     <state x="742" y="314" key="FileChooserDialogImpl" timestamp="1589813880571">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -352,30 +368,30 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="820" y="470" key="Github.ShareDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1589889998824" />
-    <state width="1876" height="261" key="GridCell.Tab.0.bottom" timestamp="1590298999176">
+    <state width="1876" height="261" key="GridCell.Tab.0.bottom" timestamp="1590342198759">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1876" height="261" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1590298999176" />
-    <state width="1876" height="261" key="GridCell.Tab.0.center" timestamp="1590298999175">
+    <state width="1876" height="261" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1590342198759" />
+    <state width="1876" height="261" key="GridCell.Tab.0.center" timestamp="1590342198758">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1876" height="261" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1590298999175" />
-    <state width="1876" height="261" key="GridCell.Tab.0.left" timestamp="1590298999174">
+    <state width="1876" height="261" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1590342198758" />
+    <state width="1876" height="261" key="GridCell.Tab.0.left" timestamp="1590342198758">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1876" height="261" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1590298999174" />
-    <state width="1876" height="261" key="GridCell.Tab.0.right" timestamp="1590298999175">
+    <state width="1876" height="261" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1590342198758" />
+    <state width="1876" height="261" key="GridCell.Tab.0.right" timestamp="1590342198758">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1876" height="261" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1590298999175" />
+    <state width="1876" height="261" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1590342198758" />
     <state x="453" y="205" key="SettingsEditor" timestamp="1589966987577">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="453" y="205" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1589966987577" />
-    <state x="559" y="306" key="Vcs.Push.Dialog.v2" timestamp="1590322031094">
+    <state x="559" y="306" key="Vcs.Push.Dialog.v2" timestamp="1590323253072">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="559" y="306" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1590322031094" />
+    <state x="559" y="306" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1590323253072" />
     <state x="320" y="238" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1589822311069">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
