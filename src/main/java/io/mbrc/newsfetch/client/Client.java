@@ -31,6 +31,7 @@ public class Client {
     private final Long retryMillis;
     private final Integer fetchLimitPerThread;
     private final Integer nKafkaSenderThreads;
+    private final Integer itemsPerQuery;
 
     private Client(@NotNull KafkaPusherFactory kafkaPusherFactory,
                    ApiClient apiClient,
@@ -38,7 +39,8 @@ public class Client {
                    @Value("${client.nThreads}") Integer nThreads,
                    @Value("${client.retryMillis}") Long retryMillis,
                    @Value("${client.fetchLimitPerThread}") Integer fetchLimitPerThread,
-                   @Value("${client.nKafkaSenderThreads}") Integer nKafkaSenderThreads) {
+                   @Value("${client.nKafkaSenderThreads}") Integer nKafkaSenderThreads,
+                   @Value("${client.itemsPerQuery}") Integer itemsPerQuery) {
         this.kafkaPusher = kafkaPusherFactory.getInstance();
         this.apiClient = apiClient;
         this.rateLimiter = rateLimiter;
@@ -46,6 +48,7 @@ public class Client {
         this.retryMillis = retryMillis;
         this.fetchLimitPerThread = fetchLimitPerThread;
         this.nKafkaSenderThreads = nKafkaSenderThreads;
+        this.itemsPerQuery = itemsPerQuery;
     }
 
     public static String queryFormat(Instant instant_1, Instant instant_2) {
@@ -63,7 +66,7 @@ public class Client {
             log.info("Spawning worker for " + date.toString());
             String dateString = date.format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
             QueryParameters params = QueryParameters.builder()
-                    .limit(1)
+                    .limit(itemsPerQuery)
                     .sortBy(QueryParameters.SortBy.DISCOVER_DATE)
                     .sortOrder(QueryParameters.SortOrder.ASC)
                     .build();
