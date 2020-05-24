@@ -32,12 +32,10 @@ public class Recvr {
 
     public void execute() {
         ExecutorService pool = Executors.newFixedThreadPool(nConsumers);
-        IntStream.range(0, nConsumers).forEach(idx -> {
-            pool.submit(() -> {
-                log.info("Starting consumer #" + idx);
-                receiverFactory.getInstance().initiate(Recvr.this::recordProcessor);
-            });
-        });
+        IntStream.range(0, nConsumers).forEach(idx -> pool.submit(() -> {
+            log.info("Starting consumer #" + idx);
+            receiverFactory.getInstance().initiate(Recvr.this::recordProcessor);
+        }));
     }
 
     public void recordProcessor(String hash, NewsType news) {
