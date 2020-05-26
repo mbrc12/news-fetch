@@ -1,0 +1,102 @@
+{
+  "properties": {
+    "id": {
+      "type": "keyword",
+      "ignore_above": 512
+    },
+    "language": {
+      "type": "keyword",
+      "ignore_above": 5
+    },
+    "title": {
+      "type": "text"
+    },
+    "url": {
+      "type": "text"
+    },
+    "discoverDate": {
+      "type": "date"
+    },
+    "publishDate": {
+      "type": "date"
+    },
+    "score": {
+      "type": "float"
+    },
+    "text": {
+      "type": "text"
+    },
+    "structuredText": {
+      "type": "text"
+    },
+    "elements": {
+      "properties": {
+        "primary": {
+          "type": "boolean"
+        },
+        "type": {
+          "type": "keyword"
+        },
+        "url": {
+          "type": "text"
+        }
+      }
+    },
+    "website": {
+      "properties": {
+        "countryCode": {
+          "type": "keyword"
+        },
+        "countryName": {
+          "type": "text"
+        },
+        "domainName": {
+          "type": "text"
+        },
+        "hostName": {
+          "type": "text"
+        },
+        "iconURL": {
+          "type": "text"
+        },
+        "name": {
+          "type": "text"
+        }
+      }
+    },
+    "metadata": {
+      "properties": {
+        "category": {
+          "properties": {
+            "category": {
+              "type": "keyword"
+            },
+            "country": {
+              "type": "text"
+            },
+            "countryCode": {
+              "type": "keyword"
+            },
+            "region": {
+              "type": "text"
+            },
+            "type": {
+              "type": "keyword"
+            }
+          }
+        },
+        "readTime": {
+          "properties": {
+            "type": {
+              "type": "keyword"
+            },
+            "seconds": {
+              "type": "float"
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

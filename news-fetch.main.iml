@@ -6,6 +6,10 @@
         <fileset id="fileset" name="SpringConfig" removed="false">
           <file>file://$MODULE_DIR$/src/main/java/io/mbrc/newsfetch/client/SpringConfig.java</file>
         </fileset>
+        <fileset id="fileset2" name="Spring Application Context" removed="false">
+          <file>file://$MODULE_DIR$/src/main/java/io/mbrc/newsfetch/recvr/SpringConfig.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/io/mbrc/newsfetch/client/SpringConfig.java</file>
+        </fileset>
       </configuration>
     </facet>
   </component>

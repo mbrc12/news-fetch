@@ -52,6 +52,19 @@ test {
     useJUnitPlatform()
 }
 
+// Start the ElasticSearch and Kafka/ZK stack
+// TODO: Doesn't exit yet. Need to fix so that it exists after a while.
+task runESKafka(type : Exec) {
+    workingDir "scripts/"
+    commandLine "./boot-up.sh"
+}
+
+// Stops the ES/Kafka/ZK stack.
+task stopESKafka(type : Exec) {
+    workingDir "scripts/"
+    commandLine "./shut-down.sh"
+}
+
 task runClient(type : JavaExec) {
     main = "io.mbrc.newsfetch.client.Main"
     classpath = sourceSets.main.runtimeClasspath

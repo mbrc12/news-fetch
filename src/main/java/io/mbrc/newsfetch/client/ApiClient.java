@@ -10,6 +10,7 @@ import okhttp3.*;
 import okio.BufferedSource;
 import org.jetbrains.annotations.NotNull;
 import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
@@ -32,7 +33,7 @@ public class ApiClient implements DisposableBean {
     private final Gson gson;
     private final Hasher hasher;
 
-    private ApiClient(ApiConfig apiConfig, Gson gson, Hasher hasher) {
+    private ApiClient(@Autowired ApiConfig apiConfig, @Autowired Gson gson, @Autowired Hasher hasher) {
         this.apiConfig = apiConfig;
         this.httpClient = new OkHttpClient();
         this.gson = gson;
