@@ -2,15 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2aa7b304-d9db-42db-886c-2ffde1b73dbc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/scripts/boot-up.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/shut-down.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/es/mapping.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/recvr/FailureTask.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/news-fetch.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/news-fetch.ipr" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/news-fetch.iws" beforeDir="false" afterPath="$PROJECT_DIR$/news-fetch.iws" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/news-fetch.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/news-fetch.main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/client/ApiClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/client/ApiClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/news-fetch.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/news-fetch.test.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/boot-up.sh" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/boot-up.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/client/ApiConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/client/ApiConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/client/SpringConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/client/SpringConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/recvr/ESClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/recvr/ESClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/recvr/Recvr.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/recvr/Recvr.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/recvr/SpringConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/recvr/SpringConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/util/GsonUTCDateAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/util/GsonUTCDateAdapter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -81,12 +85,6 @@
                 <item name="news-fetch" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
               </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="news-fetch" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="other" type="c8890929:TasksNode$1" />
-              </path>
             </expand>
             <select />
           </tree_state>
@@ -135,23 +133,29 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.pathVariables" />
   </component>
   <component name="RecentsManager">
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="io.mbrc.newsfetch.util" />
     </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="io.mbrc.newsfetch.recvr" />
+      <recent name="io.mbrc.newsfetch.client" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/scripts" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="io.mbrc.newsfetch.client" />
-    </key>
   </component>
-  <component name="RunManager" selected="Gradle.news-fetch [stopESKafka]">
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="gradle jshell" />
+    </option>
+  </component>
+  <component name="RunManager" selected="Gradle.news-fetch [jshell]">
     <configuration default="true" type="Applet" factoryName="Applet">
       <module name="" />
       <option name="MAIN_CLASS_NAME" />
@@ -180,12 +184,36 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="news-fetch [runClient]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="news-fetch [jshell]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="jshell" />
+          </list>
+        </option>
+        <option name="vmOptions" value="" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="news-fetch [runClient]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="env">
+          <map>
+            <entry key="NEWS_FETCH_APITOKEN" value="sBBqsGXiYgF0Db5OV5tAw0pTcMtNGjdj4hicBlLca2Y4aNS0iVfdy4ZdIW-Pr8oen2pHZrSf1gT2PUujH1YaQA" />
+          </map>
+        </option>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -194,7 +222,7 @@
             <option value="runClient" />
           </list>
         </option>
-        <option name="vmOptions" />
+        <option name="vmOptions" value="" />
       </ExternalSystemSettings>
       <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
@@ -211,6 +239,25 @@
         <option name="taskNames">
           <list>
             <option value="runESKafka" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="news-fetch [runRecvr]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="runRecvr" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -261,8 +308,17 @@
         <option name="BuildArtifacts" enabled="false" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Gradle.news-fetch [runClient]" />
+      <item itemvalue="Gradle.news-fetch [runESKafka]" />
+      <item itemvalue="Gradle.news-fetch [stopESKafka]" />
+      <item itemvalue="Gradle.news-fetch [runRecvr]" />
+      <item itemvalue="Gradle.news-fetch [jshell]" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.news-fetch [jshell]" />
+        <item itemvalue="Gradle.news-fetch [runRecvr]" />
         <item itemvalue="Gradle.news-fetch [stopESKafka]" />
         <item itemvalue="Gradle.news-fetch [runESKafka]" />
         <item itemvalue="Gradle.news-fetch [runClient]" />
@@ -306,7 +362,14 @@
       <workItem from="1590408016109" duration="3874000" />
       <workItem from="1590476325703" duration="1694000" />
       <workItem from="1590478404250" duration="3806000" />
-      <workItem from="1590482592403" duration="4838000" />
+      <workItem from="1590482592403" duration="8139000" />
+      <workItem from="1590565224067" duration="5738000" />
+      <workItem from="1590583611061" duration="6766000" />
+      <workItem from="1590591983867" duration="1000" />
+      <workItem from="1590592000750" duration="1481000" />
+      <workItem from="1590594212904" duration="941000" />
+      <workItem from="1590596547745" duration="1294000" />
+      <workItem from="1590599899077" duration="1332000" />
     </task>
     <task id="LOCAL-00001" summary="First commit. Basic Client operations, and basic deserialization from Json.">
       <created>1589830430030</created>
@@ -378,7 +441,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590349560962</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Use mappings for ES / Insert news items by integer ids / Add gradle tasks to run ES/Kafka/ZK stack.">
+      <created>1590490088267</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1590490088267</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="UpdateCopyrightCheckinHandler">
@@ -398,7 +468,8 @@
     <MESSAGE value="Fixed issues in ESClient and logback.xml." />
     <MESSAGE value="Slight changes to configuration." />
     <MESSAGE value="Slight changes to configuration - 2." />
-    <option name="LAST_COMMIT_MESSAGE" value="Slight changes to configuration - 2." />
+    <MESSAGE value="Use mappings for ES / Insert news items by integer ids / Add gradle tasks to run ES/Kafka/ZK stack." />
+    <option name="LAST_COMMIT_MESSAGE" value="Use mappings for ES / Insert news items by integer ids / Add gradle tasks to run ES/Kafka/ZK stack." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
@@ -416,6 +487,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="447" y="147" key="#Project_Structure/0.0.1920.1080@0.0.1920.1080" timestamp="1590482256979" />
+    <state x="423" y="228" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1590588226481">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="423" y="228" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1590588226481" />
     <state x="772" y="278" key="#com.intellij.ide.util.MemberChooser" timestamp="1589826050832">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -424,66 +499,74 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="725" y="440" width="467" height="238" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1080@0.0.1920.1080" timestamp="1589870485648" />
-    <state x="288" y="123" key="CommitChangelistDialog2" timestamp="1590349560823">
+    <state x="288" y="123" key="CommitChangelistDialog2" timestamp="1590490088105">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="288" y="123" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1590349560823" />
-    <state x="742" y="314" key="FileChooserDialogImpl" timestamp="1589813880571">
+    <state x="288" y="123" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1590490088105" />
+    <state x="808" y="334" key="EnvironmentVariablesDialog" timestamp="1590588225993">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="742" y="314" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1589813880571" />
+    <state x="808" y="334" key="EnvironmentVariablesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1590588225993" />
+    <state x="742" y="314" key="FileChooserDialogImpl" timestamp="1590596586293">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="742" y="314" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1590596586293" />
     <state x="820" y="470" key="Github.ShareDialog" timestamp="1589889998824">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="820" y="470" key="Github.ShareDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1589889998824" />
-    <state width="1876" height="354" key="GridCell.Tab.0.bottom" timestamp="1590489948145">
+    <state width="1876" height="261" key="GridCell.Tab.0.bottom" timestamp="1590588761196">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1876" height="354" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1590489948145" />
-    <state width="1876" height="354" key="GridCell.Tab.0.center" timestamp="1590489948145">
+    <state width="1876" height="261" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1590588761196" />
+    <state width="1876" height="261" key="GridCell.Tab.0.center" timestamp="1590588761195">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1876" height="354" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1590489948145" />
-    <state width="1876" height="354" key="GridCell.Tab.0.left" timestamp="1590489948144">
+    <state width="1876" height="261" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1590588761195" />
+    <state width="1876" height="261" key="GridCell.Tab.0.left" timestamp="1590588761194">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1876" height="354" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1590489948144" />
-    <state width="1876" height="354" key="GridCell.Tab.0.right" timestamp="1590489948145">
+    <state width="1876" height="261" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1590588761194" />
+    <state width="1876" height="261" key="GridCell.Tab.0.right" timestamp="1590588761195">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1876" height="354" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1590489948145" />
-    <state width="1876" height="354" key="GridCell.Tab.1.bottom" timestamp="1590489948147">
+    <state width="1876" height="261" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1590588761195" />
+    <state width="1876" height="354" key="GridCell.Tab.1.bottom" timestamp="1590518209441">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1876" height="354" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1590489948147" />
-    <state width="1876" height="354" key="GridCell.Tab.1.center" timestamp="1590489948146">
+    <state width="1876" height="354" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1590518209441" />
+    <state width="1876" height="354" key="GridCell.Tab.1.center" timestamp="1590518209441">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1876" height="354" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1590489948146" />
-    <state width="1876" height="354" key="GridCell.Tab.1.left" timestamp="1590489948146">
+    <state width="1876" height="354" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1590518209441" />
+    <state width="1876" height="354" key="GridCell.Tab.1.left" timestamp="1590518209441">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1876" height="354" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1590489948146" />
-    <state width="1876" height="354" key="GridCell.Tab.1.right" timestamp="1590489948146">
+    <state width="1876" height="354" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1590518209441" />
+    <state width="1876" height="354" key="GridCell.Tab.1.right" timestamp="1590518209441">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1876" height="354" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1590489948146" />
-    <state x="453" y="205" key="SettingsEditor" timestamp="1590477397378">
+    <state width="1876" height="354" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1590518209441" />
+    <state x="453" y="205" key="SettingsEditor" timestamp="1590596601082">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="453" y="205" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1590477397378" />
+    <state x="453" y="205" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1590596601082" />
     <state x="688" y="304" width="630" height="524" key="StructurePopup" timestamp="1590409353625">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="688" y="304" width="630" height="524" key="StructurePopup/0.0.1920.1080@0.0.1920.1080" timestamp="1590409353625" />
-    <state x="559" y="306" key="Vcs.Push.Dialog.v2" timestamp="1590349566753">
+    <state x="559" y="306" key="Vcs.Push.Dialog.v2" timestamp="1590490094401">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="559" y="306" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1590349566753" />
-    <state x="320" y="238" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1590487702167">
+    <state x="559" y="306" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1590490094401" />
+    <state x="320" y="238" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1590599956707">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="320" y="238" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1590487702167" />
+    <state x="320" y="238" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1590599956707" />
+    <state x="623" y="262" width="672" height="677" key="run.anything.popup" timestamp="1590588716275">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="623" y="262" width="672" height="677" key="run.anything.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1590588716275" />
     <state x="622" y="262" width="672" height="678" key="search.everywhere.popup" timestamp="1589819700098">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

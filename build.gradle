@@ -2,6 +2,7 @@ plugins {
     id 'java'
     id 'idea'
     id "io.freefair.lombok" version "5.1.0"
+    id "com.github.mrsarm.jshell.plugin" version "1.0.0-RC1"
 }
 
 group 'io.mbrc'
@@ -46,6 +47,9 @@ dependencies {
 
     // es high level client
     implementation 'org.elasticsearch.client:elasticsearch-rest-high-level-client:7.7.0'
+
+    // mongo
+    implementation 'org.mongodb:mongo-java-driver:3.12.4'
 }
 
 test {

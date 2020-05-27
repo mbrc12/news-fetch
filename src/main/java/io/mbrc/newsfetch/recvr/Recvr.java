@@ -32,6 +32,7 @@ public class Recvr implements DisposableBean {
         this.esClient = esClient;
         this.nConsumers = nConsumers;
         this.pool = Executors.newFixedThreadPool(nConsumers);
+        log.info("Started. Java home = " + System.getProperty("java.home"));
     }
 
     public void execute() {

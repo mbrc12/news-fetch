@@ -1,6 +1,7 @@
 package io.mbrc.newsfetch.util;
 
 import com.google.gson.*;
+import org.jetbrains.annotations.NotNull;
 
 import java.lang.reflect.Type;
 import java.text.DateFormat;
@@ -29,7 +30,7 @@ public class GsonUTCDateAdapter implements JsonSerializer<Date>, JsonDeserialize
     }
 
     @Override
-    public synchronized Date deserialize(JsonElement jsonElement, Type type, JsonDeserializationContext jsonDeserializationContext) {
+    public synchronized Date deserialize(@NotNull JsonElement jsonElement, Type type, JsonDeserializationContext jsonDeserializationContext) {
         try {
             return dateFormat.parse(jsonElement.getAsString());
         } catch (ParseException e) {

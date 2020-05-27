@@ -36,7 +36,7 @@ public class ESClient implements DisposableBean {
     private final RestHighLevelClient client;
     private final String index;
     private final Gson gson;
-
+    private final FailureTask failureTask;
     private final AtomicInteger id;
 
     private ESClient(
@@ -44,10 +44,12 @@ public class ESClient implements DisposableBean {
             @Value("${recvr.esRequestHost}") String requestHost,
             @Value("${recvr.esRequestPort}") Integer requestPort,
             @Value("${recvr.esIndex}") String esIndex,
+            @Autowired FailureTask failureTask,
             @Autowired String mappingJson,
             @Autowired Gson gson
     ) throws IOException {
         this.id = new AtomicInteger(1);
+        this.failureTask = failureTask;
         this.gson = gson;
         this.client = new RestHighLevelClient(
                 RestClient.builder(
@@ -99,7 +101,9 @@ public class ESClient implements DisposableBean {
                     log.info("Document exists already. Not indexing.");
                     return;
                 }
+                persist(document);
             } catch (IOException e) {
+                persist(document); // Persist document because we couldn't process it.
                 log.error("Couldn't verify existence of document.");
             }
 
@@ -111,9 +115,15 @@ public class ESClient implements DisposableBean {
                 IndexResponse response = client.index(request, RequestOptions.DEFAULT);
                 log.info(String.format("Indexed document. Title: %s", trimmedTitleOf(news)));
             } catch (IOException e) {
+                persist(document); // Persist document
                 log.error(String.format("Failed to index document. Hash: %s", hash));
             }
         });
+    }
+
+    // Persist the current document
+    private void persist(KeyValuePair<String, NewsType> document) {
+        failureTask.submit(document);
     }
 
     @NotNull

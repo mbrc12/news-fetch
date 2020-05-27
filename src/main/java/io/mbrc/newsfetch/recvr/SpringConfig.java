@@ -3,6 +3,7 @@ package io.mbrc.newsfetch.recvr;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import io.mbrc.newsfetch.util.GsonUTCDateAdapter;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.*;
 import org.springframework.core.io.Resource;
@@ -14,6 +15,7 @@ import java.io.InputStreamReader;
 import java.util.Date;
 import java.util.stream.Collectors;
 
+@Slf4j
 @Configuration
 @ComponentScan(basePackages = {"io.mbrc.newsfetch.recvr", "io.mbrc.newsfetch.util"})
 @PropertySource("application.properties")
@@ -33,6 +35,17 @@ public class SpringConfig {
             e.printStackTrace();
             return "";
         }
+    }
+
+    @Value("${recvr.mongoURL.env}")
+    private String mongoURLEnv;
+
+    @Bean
+    @Scope("singleton")
+    public String mongoURL() {
+        log.info("mongoURLEnv = " + mongoURLEnv);
+        log.info("value of mongoURL = " + System.getenv(mongoURLEnv));
+        return System.getenv(mongoURLEnv);
     }
 
     @Bean

@@ -37,6 +37,7 @@
     <orderEntry type="library" name="Gradle: com.google.protobuf:protobuf-java:3.12.0" level="project" />
     <orderEntry type="library" name="Gradle: org.elasticsearch.client:elasticsearch-rest-high-level-client:7.7.0" level="project" />
     <orderEntry type="library" name="Gradle: commons-codec:commons-codec:1.14" level="project" />
+    <orderEntry type="library" name="Gradle: org.mongodb:mongo-java-driver:3.12.4" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Gradle: org.projectlombok:lombok:1.18.12" level="project" />
     <orderEntry type="library" name="Gradle: ch.qos.logback:logback-core:1.2.3" level="project" />
     <orderEntry type="library" name="Gradle: org.apache.kafka:kafka-clients:2.5.0" level="project" />

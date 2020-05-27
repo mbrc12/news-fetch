@@ -1,6 +1,7 @@
 package io.mbrc.newsfetch.client;
 
 import lombok.Getter;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
@@ -13,7 +14,7 @@ public class ApiConfig {
    private final String path;
 
    public ApiConfig(
-           @Value("${client.apiToken}") String apiToken,
+           @Autowired String apiToken,
            @Value("${client.scheme}") String scheme,
            @Value("${client.host}") String host,
            @Value("${client.path}") String path
