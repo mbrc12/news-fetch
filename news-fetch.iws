@@ -2,19 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2aa7b304-d9db-42db-886c-2ffde1b73dbc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/recvr/FailureTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/news-fetch.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/news-fetch.ipr" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/news-fetch.iws" beforeDir="false" afterPath="$PROJECT_DIR$/news-fetch.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/news-fetch.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/news-fetch.main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/news-fetch.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/news-fetch.test.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/boot-up.sh" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/boot-up.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/client/ApiConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/client/ApiConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/client/SpringConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/client/SpringConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/recvr/ESClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/recvr/ESClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/recvr/Recvr.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/recvr/Recvr.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/recvr/SpringConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/recvr/SpringConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/util/GsonUTCDateAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/util/GsonUTCDateAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/recvr/FailureTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/recvr/FailureTask.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -136,7 +127,7 @@
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pathVariables" />
+    <property name="settings.editor.selected.configurable" value="preferences.customizations" />
   </component>
   <component name="RecentsManager">
     <key name="ExtractSuperBase.RECENT_KEYS">
@@ -178,7 +169,6 @@
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage" enabled="false" merge="false" />
       <method v="2">
         <option name="BuildArtifacts" enabled="false" />
         <option name="Make" enabled="true" />
@@ -285,7 +275,6 @@
       <method v="2" />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
-      <extension name="coverage" enabled="false" merge="false" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -487,6 +476,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="447" y="147" key="#Project_Structure/0.0.1920.1080@0.0.1920.1080" timestamp="1590482256979" />
+    <state x="861" y="416" width="722" height="281" key="#Vim_Emulation" timestamp="1590661504354">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="861" y="416" width="722" height="281" key="#Vim_Emulation/0.27.1920.1053@0.27.1920.1053" timestamp="1590661504354" />
     <state x="423" y="228" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1590588226481">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -547,10 +540,11 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1876" height="354" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1590518209441" />
-    <state x="453" y="205" key="SettingsEditor" timestamp="1590596601082">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="453" y="227" width="1022" height="737" key="SettingsEditor" timestamp="1590659337209">
+      <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="453" y="205" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1590596601082" />
+    <state x="453" y="227" width="1022" height="737" key="SettingsEditor/0.27.1920.1053@0.27.1920.1053" timestamp="1590659337209" />
     <state x="688" y="304" width="630" height="524" key="StructurePopup" timestamp="1590409353625">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

@@ -72,6 +72,7 @@ public class FailureTask implements DisposableBean {
                     collection.insertOne(document);
                 }
                 log.info("Persisted Document: " + hash);
+                return;
             } catch (MongoException e) {
                 log.error(String.format("Failed to persist %s. Retrying after some time. Stacktrace: ", hash));
                 e.printStackTrace();

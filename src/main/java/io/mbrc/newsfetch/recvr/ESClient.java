@@ -101,10 +101,10 @@ public class ESClient implements DisposableBean {
                     log.info("Document exists already. Not indexing.");
                     return;
                 }
-                persist(document);
             } catch (IOException e) {
                 persist(document); // Persist document because we couldn't process it.
                 log.error("Couldn't verify existence of document.");
+                return;
             }
 
             IndexRequest request = new IndexRequest(this.index);
