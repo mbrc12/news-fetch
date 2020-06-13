@@ -1,12 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="2aa7b304-d9db-42db-886c-2ffde1b73dbc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/news-fetch.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/news-fetch.ipr" afterDir="false" />
+    <list default="true" id="2aa7b304-d9db-42db-886c-2ffde1b73dbc" name="Default Changelist" comment="Fix MongoClient in Failure Task. Change a few in application.properties.">
       <change beforePath="$PROJECT_DIR$/news-fetch.iws" beforeDir="false" afterPath="$PROJECT_DIR$/news-fetch.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/recvr/ESClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/recvr/ESClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/recvr/FailureTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/mbrc/newsfetch/recvr/FailureTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +137,7 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Dev/xml2es" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -443,6 +457,18 @@
   <component name="UpdateCopyrightCheckinHandler">
     <option name="UPDATE_COPYRIGHT" value="true" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
@@ -458,7 +484,8 @@
     <MESSAGE value="Slight changes to configuration." />
     <MESSAGE value="Slight changes to configuration - 2." />
     <MESSAGE value="Use mappings for ES / Insert news items by integer ids / Add gradle tasks to run ES/Kafka/ZK stack." />
-    <option name="LAST_COMMIT_MESSAGE" value="Use mappings for ES / Insert news items by integer ids / Add gradle tasks to run ES/Kafka/ZK stack." />
+    <MESSAGE value="Fix MongoClient in Failure Task. Change a few in application.properties." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix MongoClient in Failure Task. Change a few in application.properties." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
@@ -500,10 +527,11 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="808" y="334" key="EnvironmentVariablesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1590588225993" />
-    <state x="742" y="314" key="FileChooserDialogImpl" timestamp="1590596586293">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="714" y="333" width="424" height="491" key="FileChooserDialogImpl" timestamp="1590927331061">
+      <screen x="0" y="27" width="1848" height="1053" />
     </state>
     <state x="742" y="314" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1590596586293" />
+    <state x="714" y="333" width="424" height="491" key="FileChooserDialogImpl/0.27.1848.1053@0.27.1848.1053" timestamp="1590927331061" />
     <state x="820" y="470" key="Github.ShareDialog" timestamp="1589889998824">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -540,6 +568,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1876" height="354" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1590518209441" />
+    <state x="468" y="370" width="973" height="583" key="Registry" timestamp="1590662121828">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="468" y="370" width="973" height="583" key="Registry/0.27.1920.1053@0.27.1920.1053" timestamp="1590662121828" />
     <state x="453" y="227" width="1022" height="737" key="SettingsEditor" timestamp="1590659337209">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -549,10 +581,11 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="688" y="304" width="630" height="524" key="StructurePopup/0.0.1920.1080@0.0.1920.1080" timestamp="1590409353625" />
-    <state x="559" y="306" key="Vcs.Push.Dialog.v2" timestamp="1590490094401">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="559" y="325" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1590661719588">
+      <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="559" y="306" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1590490094401" />
+    <state x="559" y="325" width="800" height="535" key="Vcs.Push.Dialog.v2/0.27.1920.1053@0.27.1920.1053" timestamp="1590661719588" />
     <state x="320" y="238" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1590599956707">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

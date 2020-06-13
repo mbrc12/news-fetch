@@ -24,6 +24,6 @@ public class KeyValuePair<K, V> {
     }
 
     public static <K, V> KeyValuePair<K, V> pairOf(K key, V value) {
-        return new KeyValuePair(key, value);
+        return new KeyValuePair<>(key, value);
     }
 }

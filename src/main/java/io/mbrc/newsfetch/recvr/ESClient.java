@@ -8,13 +8,11 @@ import org.apache.http.HttpHost;
 import org.elasticsearch.ElasticsearchException;
 import org.elasticsearch.action.get.GetRequest;
 import org.elasticsearch.action.index.IndexRequest;
-import org.elasticsearch.action.index.IndexResponse;
 import org.elasticsearch.action.support.master.AcknowledgedResponse;
 import org.elasticsearch.client.RequestOptions;
 import org.elasticsearch.client.RestClient;
 import org.elasticsearch.client.RestHighLevelClient;
 import org.elasticsearch.client.indices.CreateIndexRequest;
-import org.elasticsearch.client.indices.CreateIndexResponse;
 import org.elasticsearch.client.indices.GetIndexRequest;
 import org.elasticsearch.client.indices.PutMappingRequest;
 import org.elasticsearch.common.xcontent.XContentType;
@@ -60,8 +58,7 @@ public class ESClient implements DisposableBean {
         if (!exists) {
             CreateIndexRequest createIndexRequest = new CreateIndexRequest(this.index);
             try {
-                CreateIndexResponse response =
-                        client.indices().create(createIndexRequest, RequestOptions.DEFAULT);
+                client.indices().create(createIndexRequest, RequestOptions.DEFAULT);
                 log.info("Created index " + this.index);
 
                 // Now add the mapping
@@ -112,7 +109,7 @@ public class ESClient implements DisposableBean {
             request.source(gson.toJson(news), XContentType.JSON);
 
             try {
-                IndexResponse response = client.index(request, RequestOptions.DEFAULT);
+                client.index(request, RequestOptions.DEFAULT);
                 log.info(String.format("Indexed document. Title: %s", trimmedTitleOf(news)));
             } catch (IOException e) {
                 persist(document); // Persist document
