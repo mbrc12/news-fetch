@@ -33,7 +33,8 @@ public class ApiClient implements DisposableBean {
     private final Gson gson;
     private final Hasher hasher;
 
-    private ApiClient(@Autowired ApiConfig apiConfig, @Autowired Gson gson, @Autowired Hasher hasher) {
+    @Autowired
+    private ApiClient(ApiConfig apiConfig, Gson gson, Hasher hasher) {
         this.apiConfig = apiConfig;
         this.httpClient = new OkHttpClient();
         this.gson = gson;
